@@ -21,7 +21,7 @@ public class loginservlet extends HttpServlet {
         }
 
 
-        if (!password.matches("^(?=.[A-Z])(?=.\\d)(?=.[@#$%^&+=])(?!.[@#$%^&+=].*[@#$%^&+=]).{8,}$")) {
+        if (!password.matches("^(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=])(?!.*[@#$%^&+=].*[@#$%^&+=]).{8,}$")) {
             response.getWriter().println("Invalid password! It must have at least 8 characters, 1 uppercase letter, 1 number, and exactly 1 special character.");
             return;
         }
